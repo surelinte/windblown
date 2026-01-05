@@ -177,7 +177,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 725187996084326411, guid: f0d6143867f8d4a49974a95c12af1937, type: 3}
       propertyPath: m_Name
-      value: RoundButton (1)
+      value: Music
       objectReference: {fileID: 0}
     - target: {fileID: 725187996084326411, guid: f0d6143867f8d4a49974a95c12af1937, type: 3}
       propertyPath: m_Layer
@@ -290,13 +290,59 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2816501052786126271, guid: f0d6143867f8d4a49974a95c12af1937, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 182877976}
   m_SourcePrefab: {fileID: 100100000, guid: f0d6143867f8d4a49974a95c12af1937, type: 3}
 --- !u!224 &182877972 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7946916689381260048, guid: f0d6143867f8d4a49974a95c12af1937, type: 3}
   m_PrefabInstance: {fileID: 182877971}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &182877973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2816501052786126271, guid: f0d6143867f8d4a49974a95c12af1937, type: 3}
+  m_PrefabInstance: {fileID: 182877971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &182877974 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5963689731744605141, guid: f0d6143867f8d4a49974a95c12af1937, type: 3}
+  m_PrefabInstance: {fileID: 182877971}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182877973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &182877975 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2453458887663163796, guid: f0d6143867f8d4a49974a95c12af1937, type: 3}
+  m_PrefabInstance: {fileID: 182877971}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &182877976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182877973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e101cc06a5fe33c4796f6c05c62afe44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonMusicToggle
+  button: {fileID: 182877975}
+  icon: {fileID: 182877974}
+  MusicOnSprite: {fileID: 21300000, guid: 86451d2580bd4c24db1f8732d39c3db8, type: 3}
+  MusicOffSprite: {fileID: 21300000, guid: 333b3fc8df896ae4ea7f05c395979d31, type: 3}
 --- !u!1 &193955062
 GameObject:
   m_ObjectHideFlags: 0
