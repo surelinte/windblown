@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 public sealed class Bootstrapper : MonoBehaviour
 {
     private static bool s_Booted;
-
-    [Header("App")]
     [SerializeField] private int targetFps = 60;
+    [SerializeField] private LoadingVisual screenFader;
+    [SerializeField] private float splashHoldTime = 2f;
 
     private IEnumerator Start()
     {
@@ -19,9 +19,20 @@ public sealed class Bootstrapper : MonoBehaviour
         }
         s_Booted = true;
 
-        DontDestroyOnLoad(gameObject);
+        if (targetFps > 0)
+            Application.targetFrameRate = targetFps;
+
+        //DontDestroyOnLoad(gameObject);
 
         ApplyAppConfig();
+
+        if (screenFader != null)
+        {
+            screenFader.SetAlpha(0f);
+            yield return screenFader.FadeIn();
+            
+            yield return new WaitForSecondsRealtime(splashHoldTime);
+        }
 
         // Load persistent layers
         yield return LoadAdditiveIfNeeded(SceneRegistry.PersistentScene);
@@ -34,10 +45,17 @@ public sealed class Bootstrapper : MonoBehaviour
         yield return LoadAdditiveIfNeeded(firstScene);
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(firstScene));
 
-        // Unload Bootstrap scene
+        /*// Unload Bootstrap scene
         Scene bootstrapScene = gameObject.scene;
         Destroy(gameObject);
-        SceneManager.UnloadSceneAsync(bootstrapScene);
+        SceneManager.UnloadSceneAsync(bootstrapScene);*/
+
+        // Fade out the bootstrap overlay to reveal the first scene
+        if (screenFader != null)
+            yield return screenFader.FadeOut();
+
+        // Unload Bootstrap scene (no need to DontDestroyOnLoad this object)
+        SceneManager.UnloadSceneAsync(gameObject.scene);
     }
 
     private void ApplyAppConfig()
