@@ -16,10 +16,12 @@ public class LoadingVisual : MonoBehaviour
     public IEnumerator FadeOut()
     {
         yield return Fade(1f, 0f);
+        gameObject.SetActive(false);
     }
 
     public IEnumerator FadeIn()
     {
+        gameObject.SetActive(true);
         yield return Fade(0f, 1f);
     }
 
@@ -45,5 +47,19 @@ public class LoadingVisual : MonoBehaviour
         c.a = Mathf.Clamp01(a);
         image.color = c;
     }
+
+    public void ShowInstant()
+    {
+        gameObject.SetActive(true);
+        SetAlpha(1f);
+    }
+
+    public void HideInstant()
+    {
+        SetAlpha(0f);
+        gameObject.SetActive(false);
+    }
+
+
 
 }

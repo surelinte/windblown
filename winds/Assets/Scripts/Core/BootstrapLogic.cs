@@ -7,7 +7,7 @@ public sealed class Bootstrapper : MonoBehaviour
     private static bool s_Booted;
     [SerializeField] private int targetFps = 60;
     [SerializeField] private LoadingVisual screenFader;
-    [SerializeField] private float splashHoldTime = 2f;
+    [SerializeField] private float splashHoldTime = 0.5f;
 
     private IEnumerator Start()
     {

@@ -17,6 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MapGeneral.unity
+    guid: 299bd02920c9caf48aead0f26be93421
+  - enabled: 1
+    path: Assets/Scenes/BattleMain.unity
+    guid: 7613a2f62215c4144b9bbba449b48e35
+  - enabled: 1
+    path: Assets/Scenes/StoryGeneral.unity
+    guid: 8fc169297f7ab7c4eabff36b49bf32a6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

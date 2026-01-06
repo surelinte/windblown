@@ -7,15 +7,15 @@ public class MainMenuLogic : MonoBehaviour
     [SerializeField] private GameObject SoundWindow ;
     [SerializeField] private GameObject SettingsWindow ;
 
-  void Start() //saves to zero
+  /*void Start() //saves to zero
     {
         if (Static.size > Static.sizeMax)
         {
             Static.size = 0;
         }
-    }
+    }*/
    
-    public void StartGame() // Loading data from Static
+    /*public void StartGame() // Loading data from Static
     {
         if (Static.size == 0)
         {
@@ -23,6 +23,11 @@ public class MainMenuLogic : MonoBehaviour
         }
         Static.sceneName = "CoreMain";
         SceneManager.LoadScene("Loading");
+    }*/
+
+    public void StartButton()
+    {
+        GameFlow.Instance?.GoToMap();
     }
 
     public void CloseWindows() //For the Back button in pop-up windows

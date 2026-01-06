@@ -1637,12 +1637,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8578589351905738211, guid: 71af08b9aeedcce4f87cd7a7f4cde46b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8578589351905738211, guid: 71af08b9aeedcce4f87cd7a7f4cde46b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 32193282}
     - target: {fileID: 8578589351905738211, guid: 71af08b9aeedcce4f87cd7a7f4cde46b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartGame
+      value: StartButton
       objectReference: {fileID: 0}
     - target: {fileID: 8578589351905738211, guid: 71af08b9aeedcce4f87cd7a7f4cde46b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
