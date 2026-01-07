@@ -3,27 +3,31 @@ using MoonSharp.Interpreter;
 
 public class LuaController : MonoBehaviour
 {
-    public GameObject myCube;
+    public GameObject targetObject;
 
     void Start()
     {
-        // Set up MoonSharp
+        // Register C# function to Lua
         Script script = new Script();
 
-        // Register a C# function into Lua
-        script.Globals["MoveTo"] = (System.Action<string, float, float, float>)((name, x, y, z) =>
+        script.Globals["MoveTo"] = (System.Action<string, double, double, double>)((name, x, y, z) =>
         {
-            if (name == myCube.name)
+            if (targetObject != null && targetObject.name == name)
             {
-                myCube.transform.position = new Vector3(x, y, z);
-                Debug.Log($"Moved {name} to ({x}, {y}, {z})");
+                Vector3 newPos = new Vector3((float)x, (float)y, (float)z);
+                targetObject.transform.position = newPos;
+                Debug.Log($"Moved '{name}' to {newPos}");
+            }
+            else
+            {
+                Debug.LogWarning($"Object '{name}' not found.");
             }
         });
 
-        // Run Lua code
+        // Lua script as a string
         string luaCode = @"
             function moveObjectTo(x, y, z)
-                MoveTo('MyCube', x, y, z)
+                MoveTo('Ship', x, y, z)
             end
 
             moveObjectTo(5, 2, -3)
