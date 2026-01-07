@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Core/Persistent.unity
     guid: 662682a42fd42c247b6c38bb1b76c711
   - enabled: 1
-    path: Assets/Scenes/UI_Global.unity
+    path: Assets/Scenes/Core/UI_Global.unity
     guid: 3490021598c4d2f478c3b1f6c36dd0f6
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
