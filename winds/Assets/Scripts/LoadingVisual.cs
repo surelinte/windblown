@@ -11,7 +11,7 @@ public class LoadingVisual : MonoBehaviour
     {
         if (!image)
             image = GetComponent<Image>();
-        SetAlpha(1f);
+        SetAlpha(0f);
     }
     public IEnumerator FadeOut()
     {

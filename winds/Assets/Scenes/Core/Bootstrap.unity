@@ -325,6 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bootstrapper
   targetFps: 60
   screenFader: {fileID: 1757392717}
+  splashHoldTime: 0.5
 --- !u!1 &1036489941
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,10 +419,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1036489943}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1536, y: 1024}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1757392715
 MonoBehaviour:
@@ -443,7 +444,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4712d9acae10c4b40adfcafb46b628de, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d69995852c7a07a47888a8a387e9bff9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
